@@ -1,0 +1,321 @@
+:root{
+--color: #457cc3; 
+}
+
+
+
+.goback-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: rgb(74,123,190);
+    background: radial-gradient(circle, rgba(74,123,190,1) 0%, rgba(15,36,90,1) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Verwijder standaard linkstijlen */
+    cursor: pointer;
+
+  }
+  
+  .goback-btn:hover {
+
+    background: rgb(74,123,190);
+
+  }
+  
+
+.container {
+    /* text-align: justify; */
+  color: var(--color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  
+/*  this is where the magic happens:  */
+  background-attachment: fixed;
+}
+
+.texting{
+  background: rgb(15,36,90);
+  background: linear-gradient(264deg, rgba(15,36,90,1) 0%, rgba(74,123,190,1) 100%);  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+	right: -100%; /* Start the image outside the viewport */
+	animation: slideIn 2s forwards; /* Animation duration and fill mode */
+}
+
+@keyframes slideIn {
+	to {
+	  right: 0; /* Slide the image to the left edge */
+	}
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-left: 10;
+  }
+  
+  p {
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+    font-size: 1.2em;
+  }
+
+  @media screen 
+  and (min-device-width: 20px)
+  and (max-width: 545px) {
+
+    .texting h1 {
+      font-weight: 0;
+      font-size: 2rem;
+    }
+    
+    .texting p {
+      max-width: 52ch;
+      line-height: 1.5;
+      padding: 1em;
+      font-size: 1em;
+    }
+  }
+
+.blank{
+  width: 100%;
+  min-height: 20vh;
+  background: rgb(15,36,90);
+  background: linear-gradient(45deg, rgba(15,36,90,1) 0%, rgba(74,123,190,1) 100%);
+}
+
+.second {
+  background-attachment: fixed;
+  max-height: 1000px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+.below{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  min-height: 30vh;
+  background: rgb(15,36,90);
+  background: linear-gradient(45deg, rgba(15,36,90,1) 0%, rgba(74,123,190,1) 100%);
+}
+
+.belowBox1{
+  background: rgb(98,167,183);
+  background: linear-gradient(45deg, rgba(98,167,183,1) 0%, rgba(74,123,190,1) 100%);
+  min-height: 150px;
+  width: 400px;
+  margin: 25px;
+  border-radius: 25px;
+  position: relative;
+  padding: 10px;
+
+}
+
+.belowBox1 h3{
+  margin-top: 6px;
+  margin-left: 15px;
+
+}
+
+.belowBox1:hover{
+  box-shadow: 8px 8px 0px white;
+  transition: 0.3s ease-in;
+  left: -5px;
+}
+
+.belowBox2{
+  background: rgb(98,167,183);
+  background: linear-gradient(225deg, rgba(98,167,183,1) 0%, rgba(74,123,190,1) 100%);
+  min-height: 150px;
+  width: 400px;
+  margin: 25px;
+  border-radius: 25px;
+  position: relative;
+  padding: 10px;
+}
+
+.belowBox2 h3{
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+.belowBox2:hover{
+  box-shadow: 8px 8px 0px white;
+  transition: 0.3s ease-in;
+  left: -5px;
+}
+
+.belowBox3{
+  background: rgba(56, 171, 112, 0.7);
+  min-height: 150px;
+  width: 400px;
+  margin: 25px;
+  border-radius: 25px;
+  position: relative;
+  padding: 10px;
+
+}
+
+.belowBox3 h3{
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+.belowBox3:hover{
+  box-shadow: 8px 8px 0px white;
+  transition: 0.3s ease-in;
+  left: -5px;
+}
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+  .olcards,
+  .olcards * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .olcards {
+    margin-top: 20px;
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    --cardsGap: 1rem;
+    gap: var(--cardsGap);
+    padding-bottom: var(--cardsGap);
+    max-height: 1000px;
+  }
+  .olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
+  }
+  
+  .olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+  }
+  
+  .olcards li .content {
+    background-color: var(--cardColor);
+    --inlinePadding: 1em;
+    --boxPadding: 0.5em;
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+      var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    grid-template-areas:
+      "icon title"
+      "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--arrowClipSize)) 0,
+      100% 50%,
+      calc(100% - var(--arrowClipSize)) 100%,
+      calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+      0 calc(100% + var(--cardsGap))
+    );
+    position: relative;
+    max-width: 750px;
+    max-height: 300px;
+  }
+  .olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+  }
+  .olcards li .content::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+  }
+  .olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
+  }
+  .olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+    /* font-weight: 700; */
+  }
+  .olcards li .content .text {
+    grid-area: text;
+  }
+  
+
+  @media screen 
+  and (min-device-width: 20px)
+  and (max-width: 545px) {
+
+    .below{
+      width: 100%;
+      min-height: 40vh;
+      min-height: 70opx;
+      background: rgb(15,36,90);
+      background: linear-gradient(45deg, rgba(15,36,90,1) 0%, rgba(74,123,190,1) 100%);
+    }
+    .olcards li .content .text {
+      grid-area: text;
+      font-size: 3vmin;
+      font-weight: 100;
+        }
+
+    .icon img{
+      height: 30px;
+    }
+
+
+    .olcards li .content .title {
+      grid-area: title;
+      font-size: 1.1em;
+      /* font-weight: 700; */
+    }
+  }

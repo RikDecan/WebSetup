@@ -1,0 +1,260 @@
+:root {
+    --color: #4A7BBE;  /*kleur van onderste golf*/
+  }
+  
+  .content {
+    max-width: 600px;
+    margin: 50px auto 0;
+    padding-bottom: 150px; /* Dit voegt 200 pixels padding toe aan de onderkant */
+  
+  }
+
+  .slide-link,
+  .whyUsbutton {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .slide-link {
+    display: inline-block; /* Zorgt ervoor dat de link zich gedraagt als een blokelement */
+  }
+  
+  .whyUsbutton {
+    margin-left: 30px;
+    display: inline-block; /* Zorg ervoor dat het een inline-block element is */
+    background-color: #253d9a; /* Achtergrondkleur van de knop */
+    color: white; /* Tekstkleur van de knop */
+    text-align: center; /* Centreer de tekst in de knop */
+    padding: 10px 20px; /* Binnenste vulling van de knop */
+    border-radius: 5px; /* Afronding van de randen van de knop */
+    text-decoration: none; /* Verwijder onderstreping van de link */
+    cursor: pointer; /* Verander de cursor naar een pointer bij hover */
+  	position: relative;
+	left: -1000%; /* Start the image outside the viewport */
+	animation: slideIn 3s forwards; /* Animation duration and fill mode */
+  }
+  
+  @keyframes slideIn {
+	to {
+	  left: 0; /* Slide the image to the left edge */
+	}
+  }
+
+
+  .whyUsbutton:hover{
+    background-color: #253d9a; /* Achtergrondkleur van de knop */
+    box-shadow: 8px 8px 0px white;
+    transition: 0.3s ease-in;
+    top: -5px ;
+    left: -5px;
+  }
+
+  .welkom1 {
+    background-image: linear-gradient(to right, #497abc, #38ab70, #ffff); /* Verticale gradiënt van rood naar groen */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Om de tekstkleur door de gradiënt te laten schijnen */
+  }
+
+  #ws1, #ws2 {
+    margin-top: -25px;
+    margin-right: 20px;
+    display: inline-block; /* Zorgt ervoor dat de elementen naast elkaar worden weergegeven */
+  }
+  
+  .hero {
+    position: relative;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-height: 750px ;
+
+  }
+  
+  .hero h2,
+  .hero p {
+    position: relative;
+    z-index: 1;
+   
+  }
+  
+  .hero h2 {
+    font-size: 4.5rem;
+    margin: 30px;
+    line-height: 1;
+    color: white;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color:white;
+    line-height: 1.4;
+    margin: 30px;
+    margin-right: 50px;
+    
+    
+  }
+  /*----------------------------📱🌊MOBILE WAVES🌊📱-----------------------------*/
+
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: var(--color);
+    /* box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); */
+    transition: 500ms;
+  }
+  
+  .waves::before,
+  .waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  
+  .waves::before {
+    border-radius: 44%;
+    background: #38AB70;  /*kleur voorlaatste golf*/
+    animation: waves 8s linear infinite;
+  }
+  
+  .waves::after {
+    border-radius: 44%;
+    background: #0f245a; /* achtergrond ?*/
+    animation: waves 15s linear infinite;
+  }
+  
+ /*----------------------------💻🌊BIGGER WAVES🌊💻-----------------------------*/
+
+ .editorial {
+  display: block;
+  width: 100%;
+  height: 60px;
+  max-height: 60px;
+  margin: 0;
+  z-index:5;
+  bottom:0;
+  position:absolute;
+  left:0px;
+  float:left;
+}
+
+.parallax1 > use {
+  animation: move-forever1 10s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax2 > use {
+  animation: move-forever2 8s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax3 > use {
+  animation: move-forever3 6s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax4 > use {
+  animation: move-forever4 4s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+
+
+/*----------------------------🗝️KEYFRAMES🗝️-----------------------------*/
+
+/* mobile wave */
+
+  @keyframes waves {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }  
+     
+
+/* laptop wave */
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  @keyframes move-forever4 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  } 
+  /*----------------------------📱MEDIA QUERRY'S📱-----------------------------*/
+  
+    
+    @media only screen and (max-width: 600px) {
+      #ws1, #ws2 {
+        display: block; /* Zet de weergave om naar blok, zodat ze onder elkaar komen te staan */
+        margin-right: 20px; /* Herstel de rechtermarge voor kleinere schermen */
+      }
+    }
+    
+    @media only screen and (min-width: 601px) {
+      #ws2 {
+        margin-left: -25px; /* Verplaats het tweede h2-element naar links om de spatie te verwijderen */
+      }
+    }
+    
+    @media only screen and (min-width: 1150px) {
+      .waves {
+       display: none; /* Verplaats het tweede h2-element naar links om de spatie te verwijderen */
+      }
+    }
+
+
+   @media only screen and (max-width: 1150px) {
+  .editorial {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .hero {
+    top: 50px;
+  }
+}
+
+@media only screen and (min-width: 865px) {
+  .hero {
+    height: 80vh;
+  }
+}

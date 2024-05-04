@@ -1,0 +1,324 @@
+/*-------------------------------------------------------------CONTACTFORMULIER-------------------------------------------------------------*/
+
+.form {
+    width: 340px;
+    height: auto; /* We passen de hoogte aan zodat deze automatisch wordt aangepast aan de inhoud */
+    background: rgb(73,121,187);
+    background: radial-gradient(circle, rgba(73,121,187,1) 22%, rgba(15,36,90,1) 100%);
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    padding: 20px 30px;
+    max-width: 100%; /* Zorg ervoor dat het formulier niet breder wordt dan het scherm */
+    margin: 30px auto 20px; /* Marges aanpassen zoals eerder besproken */
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    border: 3px solid whitesmoke;
+  }
+
+
+  /* We passen de stijl van h2 aan om het consistent te maken met je ontwerp */
+  .form h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 230px;
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  
+  /* We passen de stijl van input aan om het consistent te maken met je ontwerp */
+  .form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid white;
+  }
+
+  textarea {
+    height: 100px;
+  }
+  
+  /* We passen de stijl van input aan voor focus om het consistent te maken met je ontwerp */
+  .form input:focus {
+    border-bottom: 2px solid white;
+    
+  }
+  
+  /* We passen de stijl van p:before aan om het consistent te maken met je ontwerp */
+  .form p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* We passen de stijl van button aan om het consistent te maken met je ontwerp */
+  .form button {
+    width: 100%; /* We maken de knop volledige breedte */
+    padding: 8px 0; /* We passen de padding aan om de hoogte van de knop te vergroten */
+    margin: 20px 0 0; /* We passen de marge aan om wat ruimte toe te voegen onder de knop */
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid white;
+    background: #0f2359 ;
+    color: white;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 10px;
+  }
+  
+  /* We passen de stijl van button:hover aan om het consistent te maken met je ontwerp */
+  .form button:hover {
+    background: white;
+    color:  #0f2359 ;
+    transition: 0.5s ease;
+    }
+  
+  /* We passen de stijl van div aan om het consistent te maken met je ontwerp */
+  .form div {
+    margin-top: 20px;
+    color: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    box-shadow: 0 0 40px -14px #000;
+  }
+  
+  ::placeholder {
+    color: white;
+
+  }
+
+
+
+  .link-container {
+    text-align: center;
+    background-color: rgb(102, 158, 216);
+  }
+
+  .link-container:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: .4s ease-in;
+
+  }
+
+
+.cont-link {
+    display: block;
+    padding: 0;
+
+}
+
+  a.cont-link {
+    text-decoration: none; /* Verwijder onderstreping van de link */
+    color: #ffffff; /* Stel de tekstkleur in */
+    /* Voeg eventueel andere stijlen toe */
+}
+a.cont-link:hover {
+  color: #ffff; 
+  transition: 0.5s ease;
+
+}
+
+
+/*||||||||||||||||||||||||   Containter en foto  |||||||||||||||||||||||||*/
+.contactFormPicture{
+  max-width: 500px;
+  height: fit-content;
+  margin-top: 30px;
+  align-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
+
+}
+
+
+.contactFormPicture img{
+  max-width: 100%;
+  height:fit-content;
+  border: 3px solid whitesmoke ;
+  border-radius: 15px;
+}
+
+
+
+
+.contactContainer{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+
+.contactText{
+  height: 150px;
+  max-height: none;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 17px;
+}
+
+
+
+
+/*--------------------📳MOBILE📳---------------------*/
+@media screen 
+  and (min-device-width: 20px)
+  and (max-width: 1226px) 
+  
+  {
+    .contactFormPicture{
+      display: none;
+    }
+
+    .contactContainer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      /* margin: 50px;
+      max-width: 1550px;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: none; */
+    
+    }
+
+
+    .contactFormPicture{
+      max-width: 350px;    
+    }
+    
+    
+  }
+
+/*--------------------LAPTOP AND HIGER---------------------*/
+  @media screen 
+  and (min-device-width: 1226px){
+    .contactContainer{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      align-content: center;    
+      /* margin: 50px;
+      max-width: 1550px;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: none; */
+      margin: auto;
+      width: 100%;
+    
+    }
+
+  }
+
+
+
+
+/*///////////////////////////WhatsAppDiv////////////////////////////////*/
+
+#whatsAppVerwijzing{
+  width: 150px;
+  background-color: #38ab70;
+  max-width: 300px;
+  border-radius: 25px;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 10px;
+  max-height: 175px;
+  padding: 10px;
+  text-align: center 
+}
+
+#whatsAppVerwijzing img{
+  
+  width: 50px;
+}
+
+#clickyFinger{
+max-width: 50px;
+position: fixed;
+bottom: 50px;
+right: 105px;
+z-index: 100;
+display: none;
+}
+
+
+.horizontal-shake {
+  animation: horizontal-shaking 2.5s infinite;
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(10px) }
+  50% { transform: translateX(-10px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+/* ---------------------------------------------------------------------------- BREATHING CIRCLE ----------------------------------------------------------------------------*/
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: #457cc3;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #0f245a;
+  z-index: -10;
+}
+
+.large{
+  width: 300px;
+  height: 300px;
+  left: -150px;
+  bottom: 200px;
+}
+
+.xlarge{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: 150px;
+}
+
+.xxlarge{
+  width: 500px;
+  height: 500px;
+  left: -250px;
+  bottom: 100px;
+}
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+}

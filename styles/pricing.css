@@ -1,0 +1,351 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+
+.invisDiv{
+    height: 100px;
+    display: none;
+}
+
+h2 {
+    margin: 0;
+  }
+  
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 250px;
+    margin-top: 100px;
+  }
+  
+  /* Columns */
+  .column {
+    flex: 25%;
+    padding: 10px;
+    width: calc(33.3% - 30px);
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 980px) {
+    .column {
+      flex: 50%;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .column {
+      flex: 100%;
+      display: block;
+    }
+  }
+  
+  /* Pricing Card */
+  .pricing-card {
+    height: 600px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.4s;
+    
+  }
+  .pricing-card.design {
+    background: rgb(69,124,195);
+    background: linear-gradient(235deg, rgba(69,124,195,1) 0%, rgba(56,171,112,1) 100%);
+  }
+  
+  .pricing-card.website {
+    background: rgb(69,124,195);
+    background: linear-gradient(180deg, rgba(69,124,195,1) 0%, rgba(56,171,112,1) 100%);
+  }
+  
+  .pricing-card.allInOne {
+    background: rgb(69,124,195);
+    background: linear-gradient(135deg, rgba(69,124,195,1) 0%, rgba(56,171,112,1) 100%);
+  }
+  
+  .price-title img{
+    width: 65px;
+    height: auto;
+    margin-top: -10px;
+  }
+  
+  .pricing-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+  
+  .popular {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: auto;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #eb3b5a;
+    color: white;
+    font-size: 12px;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .badge-box {
+    padding: 0 40px;
+    margin-top: 80px;
+    color: white;
+  }
+  
+  .badge-box span {
+    display: inline-block;
+    border: 1px solid #4b7bec;
+    padding: 4px 12px;
+    border-radius: 25px;
+    overflow: hidden;
+    color: #4b7bec;
+    color: white;
+  
+  }
+  #coding img{
+    width: 65px;
+    height: auto;
+    margin-top: -10px;
+    padding: 3px;
+  }
+  
+  li{
+    color: white;
+  }
+  .pricing-header {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .plan-title {
+    font-size: 24px;
+    color: white;
+    position: relative;
+    top: 25%;
+  }
+  
+  .price-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    left: calc(50% - 60px);
+    top: 60%;
+    background-color: white;
+    position: absolute;
+  }
+  
+  .price-circle .info {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .price-circle .price-title {
+    display: block;
+    font-size: 28px;
+    padding: 28px 0 0;
+    font-weight: bold;
+  }
+  
+  .price-circle .price-title small {
+    font-size: 18px;
+  }
+  
+  .pricing-header h2 {
+    position: relative;
+    top: 40%;
+    color: #fff;
+  }
+  
+  ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+  
+  ul li {
+    list-style-type: none;
+    display: block;
+    padding: 15px 0 15px 0;
+    margin: 0;
+  }
+  
+  .buy-button-box {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+  }
+  
+  .buy-button-box .buy-now {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #3457b1;
+    margin-top: 20px;
+  }
+  
+  /* Card Themes */
+  .design .pricing-header {
+    background: rgba(255, 255, 255, 0.20);  
+  }
+  
+  .pricing-card{
+
+  }
+  
+  
+  .design .price-circle {
+    border: 10px solid #0f245a;
+  }
+  
+  
+  
+  .design .buy-now:hover {
+    background-image: none !important;
+    background-color: #0f245a!important;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  .website .pricing-header {
+    background: rgba(255, 255, 255, 0.20);  
+
+
+  }
+  
+  .website .price-circle {
+    border: 10px solid #0f245a;
+  }
+  
+  
+  .website .buy-now:hover {
+    background-image: none !important;
+    background-color: #0f245a !important;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .allInOne .pricing-header {
+    background: rgba(255, 255, 255, 0.20);  
+
+  }
+  
+  .allInOne .price-circle {
+    border: 10px solid #0f245a;
+  }
+  
+  
+  
+  .allInOne .buy-now:hover {
+    background-image: none !important;
+    background-color: #0f245a !important;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @media screen 
+  and (min-device-width: 701px) {
+
+    .pricing-card.design  {
+        position: relative;
+        left: -100%; /* Start the image outside the viewport */
+        animation: slideIn 1s forwards; /* Animation duration and fill mode */
+      }
+  
+      @keyframes slideIn {
+        to {
+          left: 0; /* Slide the image to the left edge */
+        }
+      }
+    
+      .pricing-card.website {
+        position: relative;
+        top: -100%; /* Start the image outside the viewport */
+        animation: slideIn2 1.2s forwards; /* Animation duration and fill mode */
+      }
+      
+      @keyframes slideIn2 {
+        to {
+          top: 0; /* Slide the image to the left edge */
+        }
+      }
+    
+      .pricing-card.allInOne {
+        position: relative;
+        right: -100%; /* Start the image outside the viewport */
+        animation: slideIn3 1s forwards; /* Animation duration and fill mode */
+      }
+      
+      @keyframes slideIn3 {
+        to {
+          right: 0; /* Slide the image to the left edge */
+        }
+      }
+
+   }
+
+   @media screen 
+   and (max-device-width: 700px) {
+
+
+    .pricing-card.design  {
+      position: relative;
+      left: -100%; /* Start the image outside the viewport */
+      animation: slideIn 1s forwards ease-out; /* Animation duration and fill mode */
+      animation-delay: 0s; /* Wait for 2 seconds before animation starts */
+    }
+
+    @keyframes slideIn {
+      to {
+        left: 0; /* Slide the image to the left edge */
+      }
+    }
+  
+    .pricing-card.website {
+      position: relative;
+      right: -100%; /* Start the image outside the viewport */
+      animation: slideIn2 1.2s forwards ease-out; /* Animation duration and fill mode */
+      animation-delay: 1s; /* Wait for 2 seconds before animation starts */
+    }
+    
+    @keyframes slideIn2 {
+      to {
+        right: 0; /* Slide the image to the left edge */
+      }
+    }
+
+    .pricing-card.allInOne {
+      position: relative;
+      left: -100%; /* Start the image outside the viewport */
+      animation: slideIn3 1s forwards; /* Animation duration and fill mode */
+      animation-delay: 2s; /* Wait for 2 seconds before animation starts */
+
+    }
+    
+    @keyframes slideIn3 {
+      to {
+        left: 0; /* Slide the image to the left edge */
+      }
+    }
+
+   }

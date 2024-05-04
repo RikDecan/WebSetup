@@ -1,0 +1,202 @@
+body {
+  background-color: #0f245a;
+  color: white;
+}
+
+.biggerFish {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: none;
+
+}
+
+.firstHere {
+  padding: 15px;
+  background: rgb(74,123,190);
+  background: linear-gradient(90deg, rgba(74,123,190,1) 0%, rgba(47,84,145,1) 20%, rgba(15,36,90,1) 100%); 
+  max-width: 650px;
+  border-radius: 45px;
+  margin: 5px;
+  font-size: 1.6rem;
+  max-height: 325px;
+  padding: 15px;
+  font-size: 1.2rem;
+  max-height: none;
+}
+
+.firstHere h1, .firstHere p{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.icon-container {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #4a7bbe; */
+  max-width: 850px;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin: 18px;
+
+}
+
+.icon-container > div {
+  /* border: 2px solid white; */
+  border-radius: 25px;
+  width: 200px;
+  margin: 6px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.icon-container img {
+  /* padding: 15px; */
+  margin-top: 15px;
+  max-width: 100px;
+}
+
+/*----------------------------📱MEDIA QUERRY'S📱-----------------------------*/
+
+
+/*--------------------📳MOBILE📳---------------------*/
+@media screen 
+  and (min-device-width: 20px)
+  and (max-width: 1226px) 
+  
+  {
+
+  .biggerFish {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    max-width: 1550px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: none;
+    justify-content: center;
+  
+  }
+  
+  .firstHere {
+    padding: 15px;
+    border-radius: 45px;
+    font-size: 1.2rem;
+    max-height: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .icon-container > div {
+    border-radius: 25px;
+    width: 150px;
+    margin: 6px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .icon-container {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 35px;
+    margin-top: 10px;
+  }
+} 
+/*--------------------🥃TABLET🥃---------------------*/
+
+/*--------------------💻LAPTOP💻---------------------*/
+
+@media screen 
+  and (min-device-width: 1226px) 
+  and (max-device-width: 1605px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+
+  .biggerFish {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    max-width: 1550px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: none;
+    justify-content: center;
+  
+  }
+  
+  .firstHere {
+    padding: 15px;
+    border-radius: 45px;
+    font-size: 1.2rem;
+    max-height: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
+  .icon-container > div {
+    border-radius: 25px;
+    width: 155px;
+    margin: 6px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .icon-container {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 35px;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+/*--------------------🖥️DESKTOP🖥️---------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------🖱️Scroll Animatie🖱️---------------------*/
+
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    @keyframes scroll {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .scroll-animation {
+      animation-name: scroll;
+      animation-duration: 6s ; /* Adjusted duration to 5 seconds for slower scrolling */
+      animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Adjust the cubic-bezier values if needed */
+    }
+      

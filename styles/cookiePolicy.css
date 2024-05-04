@@ -1,0 +1,103 @@
+/* Styles for Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(98, 167, 183, 0.78);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 100000000;
+}
+
+.cookie-banner p {
+    margin: 0;
+}
+
+.cookie-banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cookie-banner button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#accept-essential-cookies-btn , #accept-all-cookies-btn{
+
+    margin: 5px;
+    border-radius: 15px;
+
+}
+
+/*----------------------------📱MEDIA QUERRY'S📱-----------------------------*/
+
+/*-------------------------🖥️💻LAPTOP & DESKTOP💻🖥️-------------------------*/
+@media screen 
+  and (min-device-width: 817px)
+  and (max-width: 2000px) 
+  
+  {
+
+    .cookie-banner {
+        position: fixed;
+        width: 40%;
+        /* background-color: #62a7b7; */
+        color: #fff;
+        padding: 10px;
+        margin-left: 10px;
+        text-align: center;
+        z-index: 1000;
+        bottom: 5%; 
+        border-radius: 25px;
+        left: -100%; /* Start the image outside the viewport */
+        animation: slideIn 3s forwards; /* Animation duration and fill mode */
+        animation-delay: 10s; 
+
+    }    
+
+      
+      @keyframes slideIn {
+        to {
+          left: 0; /* Slide the image to the left edge */
+        }
+      }
+    }
+
+
+
+
+/*-------------------------📳PHONE AND TABLET📳-------------------------*/
+
+
+
+    @media screen 
+    and (max-device-width: 816px)
+    
+    {
+
+
+    .cookie-banner {
+
+      margin-bottom: 5px;
+      border-radius: 15px;
+
+        bottom: -100%; /* Start the image outside the viewport */
+        animation: slideIn4 3s forwards; /* Animation duration and fill mode */
+        animation-delay: 15s; 
+
+    }    
+
+      
+      @keyframes slideIn4 {
+        to {
+          bottom: 0; /* Slide the image to the left edge */
+        }
+      }
+    }
+  
+
+  
