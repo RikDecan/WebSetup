@@ -262,7 +262,15 @@ h2 {
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
   }
   
-  
+  @media screen 
+  and (min-device-width: 865px){
+
+    .container {
+      margin-top: 15px;
+    }
+    
+  }
+
   @media screen 
   and (min-device-width: 701px) {
 

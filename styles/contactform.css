@@ -153,7 +153,6 @@ a.cont-link:hover {
 .contactContainer{
   display: flex;
   flex-wrap: wrap;
-
 }
 
 
@@ -163,12 +162,35 @@ a.cont-link:hover {
   max-height: none;
   max-width: 800px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 0px;
   padding: 17px;
 }
 
 
+.outFormButton {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  height: 45px;
+  width: 140px;
+  border-radius: 15px;
+  line-height: 45px; /* Deze waarde moet gelijk zijn aan de hoogte van de knop */
+}
+.wrapper75{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around; /* Ruimte tussen de elementen gelijk verdelen */
+  background: rgb(74,123,190);
+  background: radial-gradient(circle, rgba(74,123,190,1) 0%, rgba(18,49,109,1) 100%);
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 7px;
+  margin-top: 7px;
+}
 
+
+.link-container a.cont-link span {
+  margin-top: 500px;
+}
 
 /*--------------------📳MOBILE📳---------------------*/
 @media screen 
@@ -193,13 +215,24 @@ a.cont-link:hover {
     
     }
 
+    
+    .inFormulier{
+      display: block;
+    }
 
-    .contactFormPicture{
-      max-width: 350px;    
+    .outFormulier{
+      display: none;
     }
     
+
+    .outFormulierWrapper{
+      display: none;
+    }
     
   }
+
+
+
 
 /*--------------------LAPTOP AND HIGER---------------------*/
   @media screen 
@@ -217,6 +250,19 @@ a.cont-link:hover {
       margin: auto;
       width: 100%;
     
+    }
+
+    .inFormulier{
+      display: none;
+    }
+
+    .outFormulier{
+      display: block;
+    }
+    
+
+    .outFormulierWrapper{
+      display: block;
     }
 
   }
