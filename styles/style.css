@@ -12,6 +12,10 @@ body{
   min-height: 100vh;
   color: whitesmoke;
   background: #0F245A;
+
+  background-size: cover; /* Cover the entire element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* No repeat */
 }
 
 

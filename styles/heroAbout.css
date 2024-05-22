@@ -58,6 +58,9 @@ html {
 
 body {
 	margin: 0;
+
+	background-image: url(/sources/images/curvesAbout.svg);
+
 }
 
 img {
