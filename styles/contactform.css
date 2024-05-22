@@ -3,6 +3,10 @@
 body{
   
 	background-image: url(/sources/images/curvesContact.svg);
+
+  background-size: cover; /* Cover the entire element */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* No repeat */
 }
 
 
