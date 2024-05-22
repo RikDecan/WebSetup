@@ -208,12 +208,17 @@
   }
 
   .markedPage{
-    border: 2px solid #62a7b7;
-    border-radius: 25px;
-    padding: 5px;
-    background: rgb(98,167,183);
-    background: linear-gradient(90deg, rgba(98,167,183,1) 0%, rgba(74,123,190,1) 100%);
+    /* border: 2px solid #62a7b7;
+    border-radius: 25px; */
+    /* padding: 5px; */
+    color: rgb(98,167,183);
+    /* background: linear-gradient(90deg, rgba(98,167,183,1) 0%, rgba(74,123,190,1) 100%); */
   }
   nav.navbar a.markedPage {
     border-bottom: 2px solid #62a7b7 ;
+    
+}
+
+.markedPage a{
+  color:  rgb(98,167,183);;
 }

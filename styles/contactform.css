@@ -3,8 +3,13 @@
 .form {
     width: 340px;
     height: auto; /* We passen de hoogte aan zodat deze automatisch wordt aangepast aan de inhoud */
-    background: rgb(73,121,187);
-    background: radial-gradient(circle, rgba(73,121,187,1) 22%, rgba(15,36,90,1) 100%);
+
+    background-image: url(/sources/images/services/blob4.svg);
+    background-size: cover; /* Ensure the background image covers the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+
+
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
     padding: 20px 30px;
@@ -14,8 +19,18 @@
     font-family: 'Montserrat', sans-serif;
     position: relative;
     border: 3px solid whitesmoke;
-  }
 
+
+    position: relative; /* Ensures property works */
+    right: -300%; /* Initial state to match animation */
+    animation: slideInFromRight 2s forwards; /* Animation duration and fill mode */
+}
+
+@keyframes slideInFromRight {
+  to {
+    right: 0; /* Slide the image to the left edge */
+  }
+}
 
   /* We passen de stijl van h2 aan om het consistent te maken met je ontwerp */
   .form h2 {
@@ -129,26 +144,32 @@ a.cont-link:hover {
 
 
 /*||||||||||||||||||||||||   Containter en foto  |||||||||||||||||||||||||*/
-.contactFormPicture{
+.contactFormPicture {
   max-width: 500px;
-  /* height: fit-content; */
   max-height: fit-content;
   margin-top: 30px;
   align-content: center;
   margin-left: 25px;
   margin-right: 25px;
-
 }
-
 
 .contactFormPicture img{
   max-width: 100%;
   height:fit-content;
   border: 2px solid whitesmoke ;
   border-radius: 15px;
+
+  
+  position: relative; /* Ensures left property works */
+  left: -300%; /* Initial state to match animation */
+  animation: slideInFromLeft 2s forwards; /* Animation duration and fill mode */
 }
 
-
+@keyframes slideInFromLeft {
+  to {
+    left: 0; /* Slide the image to the left edge */
+  }
+}
 
 
 .contactContainer{
@@ -180,13 +201,32 @@ a.cont-link:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content:space-around; /* Ruimte tussen de elementen gelijk verdelen */
-  background: rgb(74,123,190);
-  background: radial-gradient(circle, rgba(74,123,190,1) 0%, rgba(18,49,109,1) 100%);
+
+  background-image: url(/sources/images/services/line2.svg);
+  background-size: cover; /* Ensure the background image covers the entire element */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+
+
   border: 2px solid white;
   border-radius: 15px;
   padding: 7px;
   margin-top: 7px;
+
+
+
+  position: relative; /* Ensures left property works */
+  bottom: -100%; /* Initial state to match animation */
+  animation: slideInFromBottom 2s forwards; /* Animation duration and fill mode */
 }
+
+@keyframes slideInFromBottom {
+  to {
+    bottom: 0; /* Slide the image to the left edge */
+  }
+}
+
+
 
 
 .link-container a.cont-link span {
